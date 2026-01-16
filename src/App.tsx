@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 
@@ -29,6 +28,12 @@ import { DealsPage } from './pages/deals/DealsPage';
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
+
+//Calender Page
+import CalenderPage from './pages/calender/CalenderPage';
+import CallsPage from './pages/calls/CallsPage';
+import PaymentsPage from './pages/PaymentsPage/Page';
+import MakePaymentPage from './pages/makePaymentPage/page';
 
 function App() {
   return (
@@ -83,7 +88,26 @@ function App() {
           <Route path="/deals" element={<DashboardLayout />}>
             <Route index element={<DealsPage />} />
           </Route>
+
+          <Route path="/calender" element={<DashboardLayout />}>
+            <Route index element={<CalenderPage />} />
+          </Route>
+
+          {/* call section */}
+          <Route path="/calls" element={<DashboardLayout />}>
+            <Route index element={<CallsPage />} />
+          </Route>
           
+          {/* Payments page */}
+          <Route path="/payments" element={<DashboardLayout />}>
+            <Route index element={<PaymentsPage />} />
+            <Route path="make-payment" element={<PaymentsPage />} />
+          </Route>
+
+          <Route path="/payments/make-payments" element={<DashboardLayout />}>
+            <Route index element={<MakePaymentPage />} />
+          </Route>
+
           {/* Chat Routes */}
           <Route path="/chat" element={<DashboardLayout />}>
             <Route index element={<ChatPage />} />

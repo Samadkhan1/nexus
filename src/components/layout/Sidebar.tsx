@@ -3,7 +3,9 @@ import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { 
   Home, Building2, CircleDollarSign, Users, MessageCircle, 
-  Bell, FileText, Settings, HelpCircle
+  Bell, FileText, Settings, HelpCircle,
+  Calendar,
+  Phone
 } from 'lucide-react';
 
 interface SidebarItemProps {
@@ -42,7 +44,10 @@ export const Sidebar: React.FC = () => {
     { to: '/investors', icon: <CircleDollarSign size={20} />, text: 'Find Investors' },
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
-    { to: '/documents', icon: <FileText size={20} />, text: 'Documents' },
+    { to: '/documents', icon: <FileText size={20} />, text: 'Documents Chamber' },
+    { to: '/calender', icon: <Calendar size={20} />, text: 'Calender' },
+    { to: '/calls', icon: <Phone size={20} />, text: 'Calls' },
+    { to: '/payments', icon: <CircleDollarSign size={20} />, text: 'Payments' },
   ];
   
   const investorItems = [
@@ -63,7 +68,7 @@ export const Sidebar: React.FC = () => {
   ];
   
   return (
-    <div className="w-64 bg-white h-full border-r border-gray-200 hidden md:block">
+    <div className="w-64  bg-white h-full border-r border-gray-200 hidden md:block">
       <div className="h-full flex flex-col">
         <div className="flex-1 py-4 overflow-y-auto">
           <div className="px-3 space-y-1">
