@@ -5,7 +5,8 @@ import {
   Home, Building2, CircleDollarSign, Users, MessageCircle, 
   Bell, FileText, Settings, HelpCircle,
   Calendar,
-  Phone
+  Phone,
+  Shield
 } from 'lucide-react';
 
 interface SidebarItemProps {
@@ -63,6 +64,7 @@ export const Sidebar: React.FC = () => {
   
   // Common items at the bottom
   const commonItems = [
+    { to: '/security', icon: <Shield size={20} />, text: 'Security' },
     { to: '/settings', icon: <Settings size={20} />, text: 'Settings' },
     { to: '/help', icon: <HelpCircle size={20} />, text: 'Help & Support' },
   ];

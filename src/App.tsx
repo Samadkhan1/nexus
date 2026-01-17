@@ -34,6 +34,7 @@ import CalenderPage from './pages/calender/CalenderPage';
 import CallsPage from './pages/calls/CallsPage';
 import PaymentsPage from './pages/PaymentsPage/Page';
 import MakePaymentPage from './pages/makePaymentPage/page';
+import PrivacyPage from './pages/PrivacyPage/page';
 
 function App() {
   return (
@@ -79,6 +80,10 @@ function App() {
           
           <Route path="/settings" element={<DashboardLayout />}>
             <Route index element={<SettingsPage />} />
+          </Route>
+
+          <Route path="/security" element={<DashboardLayout />}>
+            <Route index element={<PrivacyPage />} />
           </Route>
           
           <Route path="/help" element={<DashboardLayout />}>

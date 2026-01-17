@@ -1,6 +1,5 @@
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
-import { Button } from "../../components/ui/Button";
 import { Link } from "react-router-dom";
 
 const recipients = ["John Doe", "Jane Smith", "Robert Johnson"];
